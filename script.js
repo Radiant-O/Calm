@@ -34,6 +34,35 @@ document.addEventListener('DOMContentLoaded', function() {
             navbarCollapse.classList.toggle('show');
         });
     }
+    
+    // Mobile Menu Handler
+    const toggler = document.querySelector('.navbar-toggler');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Toggle menu
+    toggler.addEventListener('click', function() {
+        navbarCollapse.classList.toggle('show');
+        this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = navbarCollapse.contains(event.target) || toggler.contains(event.target);
+        if (!isClickInsideNav && navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+            toggler.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Close menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+                toggler.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
 });
 
 // Update greeting based on time of day

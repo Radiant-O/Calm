@@ -16,22 +16,27 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="img/logo.png" alt="EASESPACE" id="img-logo" />
         </a>
-        <div class="search-container">
-          <input
-            type="search"
-            class="form-control"
-            placeholder="What do you what to listen to?"
-          />
-        </div>
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link active" href="index.html">Home</a>
-          <a class="nav-link" href="challenges.html">Challenges</a>
-          <a class="nav-link" href="meditation.html">Meditation</a>
-          <a class="nav-link" href="breathing.html">Breathing Exercise</a>
-          <a class="nav-link" href="profile.html">Profile</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="search-container">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="What do you what to listen to?"
+            />
+          </div>
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="challenges.html">Challenges</a>
+            <a class="nav-link" href="meditation.html">Meditation</a>
+            <a class="nav-link" href="breathing.html">Breathing Exercise</a>
+            <a class="nav-link" href="profile.html">Profile</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -62,46 +67,44 @@
       </div>
     </div>
 
-    <!-- Challenges Section -->
-    <section class="challenges">
-      <div class="container">
-        <h2>Your Challenges</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Today's Challenge</h3>
-            <div class="challenge-card">
-              <img src="img/behappy.png" alt="Breaking The Ice" id="img2" />
-              <h4>Breaking The Ice</h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
-                unde magnam suscipit, repellendus voluptatibus tempora, minima
-                obcaecati voluptas error repudiandae exercitationem quibusdam,
-                soluta veritatis? Obcaecati sequi ducimus minima quis, natus
-                dolor beatae esse corporis ad modi voluptate aspernatur!
-                Dolorum, reiciendis ut? Placeat aut ratione ex doloremque, esse
-                laboriosam voluptatum veritatis.
-              </p>
+   <!-- Challenge Section -->
+<section class="challenge-section">
+    <div class="container">
+      <h2>Daily Challenges</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="challenge-card">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2020" alt="Mindfulness Challenge" />
+            <div class="challenge-content">
+              <h3>Mindfulness Challenge</h3>
+              <p>Practice mindfulness for 10 minutes daily and improve your mental clarity.</p>
+              <button class="btn btn-primary">Start Challenge</button>
             </div>
           </div>
-          <div class="col-md-6">
-            <h3>Last Completed</h3>
-            <div class="challenge-card">
-              <img src="img/thought.png" alt="Negative Thoughts" id="img3" />
-              <h4>NEGATIVE THOUGHTS</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus rerum aspernatur vero dignissimos voluptatem
-                pariatur qui quibusdam similique eaque unde quia minus saepe
-                enim, natus a doloribus explicabo commodi? Iusto nisi, modi
-                voluptatem similique laboriosam deleniti, unde quis distinctio
-                nobis sequi necessitatibus, accusantium eius? Omnis vero
-                consequuntur architecto similique recusandae?
-              </p>
+        </div>
+        <div class="col-md-4">
+          <div class="challenge-card">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070" alt="Meditation Streak" />
+            <div class="challenge-content">
+              <h3>Meditation Streak</h3>
+              <p>Complete a 7-day meditation streak to build a consistent practice.</p>
+              <button class="btn btn-primary">Join Challenge</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="challenge-card">
+            <img src="https://images.unsplash.com/photo-1602192509154-0b900ee1f851?q=80&w=2070" alt="Breathing Exercise" />
+            <div class="challenge-content">
+              <h3>Breathing Exercise</h3>
+              <p>Master different breathing techniques for stress relief and relaxation.</p>
+              <button class="btn btn-primary">Learn More</button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <!-- Meditation Section -->
     <section id="meditation" class="meditation">

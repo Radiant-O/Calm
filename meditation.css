@@ -20,7 +20,7 @@
 }
 
 .featured-meditations {
-    padding: 80px 0;
+    padding: 60px 0;
     background: #f8f9fa;
 }
 
@@ -31,6 +31,9 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .meditation-card:hover {
@@ -46,6 +49,9 @@
 .meditation-content {
     padding: 20px;
     position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .duration {
@@ -67,6 +73,12 @@
 .meditation-content p {
     color: #666;
     margin-bottom: 20px;
+}
+
+.meditation-content .btn {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: auto;
 }
 
 /* Modal Styles */
@@ -207,28 +219,12 @@
     padding: 0.75rem;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     .meditation-hero {
         text-align: center;
     }
@@ -241,30 +237,23 @@
     .meditation-stats {
         justify-content: center;
     }
-}
 
-@media (max-width: 768px) {
-    .meditation-hero {
-        padding: 4rem 0;
-        text-align: center;
+    .featured-meditations {
+        padding: 40px 0;
     }
 
-    .meditation-hero h1 {
-        font-size: 2.5rem;
+    .meditation-card {
+        margin-bottom: 20px;
     }
 
-    .meditation-stats {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1.5rem;
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
-    .stat {
-        flex-basis: calc(50% - 1rem);
-    }
-
-    .session-card {
-        margin: 1rem 0;
+    .col-md-4 {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -297,5 +286,25 @@
 
     .session-image img {
         height: 180px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
     }
 }
