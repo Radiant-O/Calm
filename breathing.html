@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathing Exercise - Calm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="breathing.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <!-- <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://i.imgur.com/5vIKxfR.png" alt="Calm Logo">
+                Calm
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="search-container mx-auto">
+                    <input type="text" placeholder="Search..." class="form-control">
+                </div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="meditation.html">Meditation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="breathing.html">Breathing Exercise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="challenges.html">Challenges</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="EASESPACE" id="img-logo" />
+          </a>
+          <div class="search-container">
+            <input type="search" class="form-control" placeholder="What do you what to listen to?"/>
+          </div>
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="challenges.html">Challenges</a>
+            <a class="nav-link" href="meditation.html">Meditation</a>
+            <a class="nav-link active" href="breathing.html">Breathing Exercise</a>
+            <a class="nav-link" href="profile.html">Profile</a>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Breathing Exercise Section -->
+    <section class="breathing-exercise">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>Breathing Exercise</h1>
+                    <p class="lead">Follow the circle to regulate your breathing</p>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-6 mx-auto">
+                    <div class="breathing-circle-container">
+                        <div class="breathing-circle">
+                            <div class="circle-text">Breathe</div>
+                            <div class="timer">4s</div>
+                        </div>
+                        <div class="breathing-instruction">Inhale</div>
+                    </div>
+                    
+                    <div class="breathing-controls mt-4">
+                        <button class="control-btn" id="startBtn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="control-btn" id="pauseBtn">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button class="control-btn" id="resetBtn">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="breathing-techniques">
+                        <h2>Popular Techniques</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="technique-card">
+                                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2070" alt="Box Breathing">
+                                    <h3>Box Breathing</h3>
+                                    <p>4-4-4-4 Pattern</p>
+                                    <button class="btn btn-primary">Start</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="technique-card">
+                                    <img src="https://images.unsplash.com/photo-1528319725582-ddc096101511?q=80&w=2070" alt="4-7-8 Breathing">
+                                    <h3>4-7-8 Breathing</h3>
+                                    <p>Relaxing Breath</p>
+                                    <button class="btn btn-primary">Start</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="technique-card">
+                                    <img src="https://images.unsplash.com/photo-1591228127791-8e2eaef098d3?q=80&w=2070" alt="Deep Breathing">
+                                    <h3>Deep Breathing</h3>
+                                    <p>Simple & Effective</p>
+                                    <button class="btn btn-primary">Start</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="breathing.js"></script>
+</body>
+</html>

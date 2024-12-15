@@ -1,0 +1,196 @@
+.breathing-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2102');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+    position: relative;
+}
+
+.breathing-exercise {
+    min-height: calc(100vh - 76px);
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    padding: 4rem 0;
+}
+
+.breathing-exercise h1 {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.breathing-exercise .lead {
+    color: #666;
+    animation: fadeInUp 1s ease 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.breathing-circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.breathing-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.breathing-circle.inhale {
+    transform: scale(1.2);
+    animation: glow 4s infinite;
+}
+
+.breathing-circle.exhale {
+    transform: scale(1);
+}
+
+.circle-text {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.timer {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.breathing-instruction {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.breathing-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.control-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background: var(--primary-color);
+    color: white;
+}
+
+.breathing-techniques {
+    margin-top: 4rem;
+    padding: 3rem 0;
+}
+
+.breathing-techniques h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.technique-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.technique-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.technique-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.technique-card h3 {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 1.5rem 1.5rem 0.5rem;
+}
+
+.technique-card p {
+    color: #666;
+    margin: 0 1.5rem 1.5rem;
+    flex-grow: 1;
+}
+
+.technique-card .btn {
+    margin: 0 1.5rem 1.5rem;
+    background: var(--primary-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.technique-card .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 30px rgba(0,168,132,0.2);
+    }
+    50% {
+        box-shadow: 0 0 50px rgba(0,168,132,0.4);
+    }
+}
+
+@media (max-width: 768px) {
+    .breathing-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .breathing-controls {
+        gap: 1rem;
+    }
+
+    .control-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}

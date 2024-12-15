@@ -1,0 +1,192 @@
+.profile-section {
+    padding: 4rem 0;
+    background: var(--bg-light);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 1s ease;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.profile-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.profile-header p {
+    color: #666;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    animation: fadeInUp 1s ease 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 200px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: #666;
+    margin: 0;
+}
+
+.profile-content {
+    animation: fadeInUp 1s ease 0.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.activity-card, .goals-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.activity-card h2, .goals-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.activity-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.activity-date {
+    color: #666;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.goal-item {
+    margin-bottom: 1.5rem;
+}
+
+.goal-progress {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.goal-progress .progress {
+    flex-grow: 1;
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+}
+
+.goal-progress .progress-bar {
+    background: var(--primary-color);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.goal-progress span {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+@media (max-width: 991px) {
+    .profile-stats {
+        flex-wrap: wrap;
+    }
+
+    .stat-card {
+        min-width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        padding: 3rem 0;
+    }
+
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .stat-card {
+        min-width: 100%;
+    }
+
+    .activity-card, .goals-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-section {
+        padding: 2rem 0;
+    }
+
+    .profile-header {
+        margin-bottom: 2rem;
+    }
+
+    .profile-stats {
+        gap: 1rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-card h3 {
+        font-size: 2rem;
+    }
+
+    .activity-card, .goals-card {
+        padding: 1.5rem;
+    }
+}

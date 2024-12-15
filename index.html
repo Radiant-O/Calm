@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EASESPACE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="EASESPACE" id="img-logo" />
+        </a>
+        <div class="search-container">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="What do you what to listen to?"
+          />
+        </div>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="challenges.html">Challenges</a>
+          <a class="nav-link" href="meditation.html">Meditation</a>
+          <a class="nav-link" href="breathing.html">Breathing Exercise</a>
+          <a class="nav-link" href="profile.html">Profile</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Find Peace in Every Breath</h1>
+                    <p>Begin your journey to mindfulness and inner peace with guided meditations, breathing exercises, and daily challenges.</p>
+                    <a href="#meditation" class="btn btn-primary">Start Your Journey</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Section -->
+    <div class="container mt-4">
+      <div class="chat-message">
+        <img src="img/happyava.png" alt="Avatar" class="chat-avatar" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
+          reiciendis officiis alias blanditiis ab, expedita ex laborum eum
+          officia debitis vitae voluptatum atque, neque quam.
+        </p>
+      </div>
+    </div>
+
+    <!-- Challenges Section -->
+    <section class="challenges">
+      <div class="container">
+        <h2>Your Challenges</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Today's Challenge</h3>
+            <div class="challenge-card">
+              <img src="img/behappy.png" alt="Breaking The Ice" id="img2" />
+              <h4>Breaking The Ice</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
+                unde magnam suscipit, repellendus voluptatibus tempora, minima
+                obcaecati voluptas error repudiandae exercitationem quibusdam,
+                soluta veritatis? Obcaecati sequi ducimus minima quis, natus
+                dolor beatae esse corporis ad modi voluptate aspernatur!
+                Dolorum, reiciendis ut? Placeat aut ratione ex doloremque, esse
+                laboriosam voluptatum veritatis.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3>Last Completed</h3>
+            <div class="challenge-card">
+              <img src="img/thought.png" alt="Negative Thoughts" id="img3" />
+              <h4>NEGATIVE THOUGHTS</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatibus rerum aspernatur vero dignissimos voluptatem
+                pariatur qui quibusdam similique eaque unde quia minus saepe
+                enim, natus a doloribus explicabo commodi? Iusto nisi, modi
+                voluptatem similique laboriosam deleniti, unde quis distinctio
+                nobis sequi necessitatibus, accusantium eius? Omnis vero
+                consequuntur architecto similique recusandae?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meditation Section -->
+    <section id="meditation" class="meditation">
+        <div class="container">
+            <h2>Featured Meditations</h2>
+            <div class="meditation-slider">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="meditation-card">
+                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2070" alt="Morning Meditation">
+                            <div class="meditation-content">
+                                <span class="duration">10 min</span>
+                                <h4>Morning Meditation</h4>
+                                <p>Start your day with clarity and purpose</p>
+                            </div>
+                            <div class="meditation-footer">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                                <span class="category">Mindfulness</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="meditation-card">
+                            <img src="https://images.unsplash.com/photo-1528319725582-ddc096101511?q=80&w=2070" alt="Stress Relief">
+                            <div class="meditation-content">
+                                <span class="duration">15 min</span>
+                                <h4>Stress Relief</h4>
+                                <p>Release tension and find calm</p>
+                            </div>
+                            <div class="meditation-footer">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                                <span class="category">Relaxation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="meditation-card">
+                            <img src="https://images.unsplash.com/photo-1591228127791-8e2eaef098d3?q=80&w=2070" alt="Sleep Well">
+                            <div class="meditation-content">
+                                <span class="duration">20 min</span>
+                                <h4>Sleep Well</h4>
+                                <p>Gentle guidance into peaceful sleep</p>
+                            </div>
+                            <div class="meditation-footer">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                                <span class="category">Sleep</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
