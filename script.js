@@ -59,30 +59,6 @@ function updateGreeting() {
 
 updateGreeting();
 
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
 // Animate elements on scroll
 const observerOptions = {
     threshold: 0.1,
@@ -124,44 +100,6 @@ document.querySelectorAll('.challenge-card, .meditation-card').forEach(card => {
     });
 });
 
-// Particle background effect for hero section
-const createParticles = () => {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
-
-    const particlesContainer = document.createElement('div');
-    particlesContainer.className = 'particles';
-    hero.appendChild(particlesContainer);
-
-    for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 5 + 's';
-        particlesContainer.appendChild(particle);
-    }
-};
-
-createParticles();
-
-// Add ripple effect to buttons
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', function(e) {
-        const rect = button.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const circle = document.createElement('span');
-        circle.classList.add('ripple');
-        circle.style.left = `${x}px`;
-        circle.style.top = `${y}px`;
-
-        this.appendChild(circle);
-
-        setTimeout(() => circle.remove(), 1000);
-    });
-});
 
 // Typewriter effect for hero heading
 const typeWriter = (element, text, speed = 100) => {
