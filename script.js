@@ -1,29 +1,5 @@
-// Meditation Slider functionality
+
 document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.meditation-slider .row');
-    const prevBtn = document.querySelector('.slider-controls .prev');
-    const nextBtn = document.querySelector('.slider-controls .next');
-    
-    if (slider && prevBtn && nextBtn) {
-        let scrollAmount = 0;
-        const slideWidth = 300; // Approximate width of each slide
-        
-        prevBtn.addEventListener('click', () => {
-            scrollAmount = Math.max(scrollAmount - slideWidth, 0);
-            slider.scrollTo({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-        
-        nextBtn.addEventListener('click', () => {
-            scrollAmount = Math.min(scrollAmount + slideWidth, slider.scrollWidth - slider.clientWidth);
-            slider.scrollTo({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-    }
     
     // Responsive navigation
     const navbarToggler = document.querySelector('.navbar-toggler');
@@ -83,25 +59,6 @@ function updateGreeting() {
 
 updateGreeting();
 
-// Breathing Exercise Animation
-const breathingCircle = document.querySelector('.breathing-circle');
-if (breathingCircle) {
-    let isBreathingIn = true;
-    
-    function animateBreathing() {
-        if (isBreathingIn) {
-            breathingCircle.style.transform = 'scale(1.2)';
-            document.querySelector('.breathing-text').textContent = 'IN';
-        } else {
-            breathingCircle.style.transform = 'scale(1)';
-            document.querySelector('.breathing-text').textContent = 'OUT';
-        }
-        isBreathingIn = !isBreathingIn;
-    }
-    
-    setInterval(animateBreathing, 4000); // 4 seconds per breath cycle
-}
-
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
@@ -125,30 +82,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// Meditation slider functionality
-const slider = document.querySelector('.meditation-slider .row');
-const prevBtn = document.querySelector('.slider-controls .prev');
-const nextBtn = document.querySelector('.slider-controls .next');
-
-if (slider && prevBtn && nextBtn) {
-    const cardWidth = 300; // Width of each card including margin
-    const scrollAmount = cardWidth * 2; // Scroll two cards at a time
-
-    prevBtn.addEventListener('click', () => {
-        slider.scrollBy({
-            left: -scrollAmount,
-            behavior: 'smooth'
-        });
-    });
-
-    nextBtn.addEventListener('click', () => {
-        slider.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-    });
-}
 
 // Animate elements on scroll
 const observerOptions = {
